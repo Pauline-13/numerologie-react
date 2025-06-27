@@ -7,11 +7,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        'hover-Button' : '#B898A3',
-        'color-Button' : '#554E55',
+        'hover-button' : '#B898A3',
+        'color-button' : '#554E55',
       },
+         fontFamily: {
+        poppins: ['Italiana', 'serif'],
     },
   },
+},
   plugins: [],
 }
 

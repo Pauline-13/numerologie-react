@@ -59,38 +59,84 @@ function Generateur() {
     setShowNegatif(false);
   }
 
-  return (
-    <div className="relative min-h-screen w-full overflow-hidden font-sans">
-      {/* Image de fond */}
+   return (
+    <div className="relative w-full min-h-screen overflow-hidden font-sans">
       <img
         src={etoiles}
         alt="Fond étoilé"
         className="absolute inset-0 w-full h-full object-cover opacity-90 z-0"
       />
 
-      {/* Contenu principal */}
-      <div className="relative z-10 flex flex-col items-center justify-center p-6 min-h-screen text-white">
-        <h1 className="text-5xl font-light mb-4 drop-shadow-xl rounded-xl px-6 py-2 bg-white/30 backdrop-blur-lg text-black">
-          Générateur
+      <div className="relative z-10 flex flex-col items-center justify-start p-6 pt-10 text-white">
+        <h1 className="text-5xl font-light mb-10 drop-shadow-xl rounded-xl px-6 py-3 text-white font-italiana">
+          La Numérologie
         </h1>
 
+        <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-3xl p-6 shadow-md w-full max-w-md mb-10 text-white text-sm sm:text-base leading-relaxed text-center">
+          <h2 className="text-xl sm:text-2xl font-semibold mb-4 bg-white/60 text-black rounded-full py-2">
+            Qu’est-ce que c’est ?
+          </h2>
+          <p className="mb-3">
+            C’est une méthode ancienne qui permet de mieux comprendre qui vous êtes à travers les chiffres liés à votre date de naissance ou à votre nom.
+            Chaque nombre révèle des traits de personnalité, des forces, des blocages potentiels.
+          </p>
+          <p className="mb-3">
+            Dans une ère où le bien-être mental devient essentiel, on cherche tous à se recentrer, à se sentir aligné, à comprendre nos schémas.
+            Mais ce n’est pas toujours facile de trouver les bons thérapeutes, ou d’avoir les moyens d’être bien accompagné.
+          </p>
+          <p className="mb-3">
+            La numérologie peut être une première étape simple, accessible et surprenante pour :
+            <br />– Mieux comprendre vos réactions et comportements
+            <br />– Identifier ce qui vous freine ou vous challenge
+            <br />– Mettre en lumière vos talents naturels.
+          </p>
+          <p>
+            Elle ne remplace pas un accompagnement thérapeutique, mais elle peut vous donner des clés pour avancer dans votre vie, avec plus de clarté et de confiance.
+            <br /><br />
+            Nous avons tous un profil de vie unique. Laissez-vous tenter et calculez votre profil, vous serez peut-être surpris du résultat.
+          </p>
+        </div>
+
+        <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-3xl p-6 shadow-md w-full max-w-md mb-10 text-white text-sm sm:text-base leading-relaxed text-center">
+          <h2 className="text-xl sm:text-2xl font-semibold mb-4 bg-white/60 text-black rounded-full py-2">
+            Le profil de vie
+          </h2>
+          <p className="mb-3">
+            Le profil de vie est l’un des éléments les plus importants en numérologie.
+            Il se calcule à partir de votre date de naissance complète : jour + mois + année.
+          </p>
+          <p className="mb-3">
+            Il représente votre but personnel, vos forces naturelles, vos défis et constitue une direction globale qui guide votre vie.
+            C’est un peu comme une carte routière de votre existence : il ne prédit pas ce qui va se passer, mais il vous aide à mieux comprendre ce que vous êtes profondément et où vous allez.
+          </p>
+          <p className="mb-3">
+            <strong>Méthode de calcul :</strong><br />
+            On additionne tous les chiffres de votre date de naissance jusqu’à obtenir un chiffre entre 1 et 9, ou un nombre maître (11, 22 ou 33).
+          </p>
+          <p>
+            Pas de panique pour ceux qui ne sont pas à l’aise avec les calculs, nous avons un générateur ci-dessous.
+          </p>
+        </div>
         <form
           onSubmit={handleSubmit}
           className="bg-white/20 backdrop-blur-md border border-white/30 rounded-3xl p-8 shadow-lg w-full max-w-md text-center"
         >
-          <label htmlFor="date" className="block text-2xl mb-4 font-light text-white">
+ <h2 className="text-xl sm:text-2xl font-semibold mb-7 bg-white/60 text-black rounded-full py-2">
+            Générateur date de naissance
+          </h2>
+          {/* <label htmlFor="date" className="block text-2xl mb-7 font-light text-white">
             Date de naissance
-          </label>
+          </label> */}
           <input
             type="date"
             id="date"
             value={dateNaissance}
             onChange={(e) => setDateNaissance(e.target.value)}
-            className="w-full p-3 rounded-full text-center text-black font-medium bg-white/90 shadow-inner outline-none focus:ring-2 focus:ring-pink-200 mb-6"
+            className="w-full max-w-xs mx-auto p-3 text-center rounded-full text-black font-medium bg-white/90 shadow-inner outline-none focus:ring-2 focus:ring-pink-200 mb-6"
           />
           <button
             type="submit"
-            className="w-full bg-color-Button hover:bg-hoverButton text-white font-semibold py-2 px-4 rounded-full transition duration-300 shadow-md"
+            className="w-full bg-[#554E55] hover:bg-[#B898A3] text-white font-semibold py-2 px-4 rounded-full transition duration-300 shadow-md"
           >
             Calcule
           </button>
